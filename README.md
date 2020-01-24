@@ -141,7 +141,9 @@ This model does not require any contribution at this time however if you wish to
 Code written by Cameron Leighton.
 
 Further help and reading:
+
 Andy Turner - University of Leeds
+
 https://python-graph-gallery.com/2d-density-plot/
 
 ## License 

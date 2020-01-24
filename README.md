@@ -88,7 +88,7 @@ The values can be altered manually to change the windspeed and the way the bacte
 This is the output of the density model that we should expect to gather for the bacteria.
 
 ![Density Plots](https://i.imgur.com/B4ug22R.png)
-Density plots showing steps to create the last density plot.
+Density plots showing steps to create the last contoured plot.
 
 ## Testing 
 To test the model, a simple timing test was run with varying the number of bacteria. To simulate the 5000 bacteria multiple tests were done to calculate the completion time.

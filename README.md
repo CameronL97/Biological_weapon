@@ -124,7 +124,7 @@ No further work will be completed on this model at this current time.
 
 6. Append landed bacteria to a new list - Completed
 
-7. Write new list to CSV - Failed
+7. Write new list to CSV - Failed (only writes 1 X and Y coordinate to the list)
 
 8. Produce density plots - Completed (with random numbers)
 

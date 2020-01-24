@@ -6,6 +6,30 @@ A model to show fallout of a biological weapon set off in a city
 
 Currently due to the deadline of the Module this is for the model is currently unfinished however the majority of the model is finished. Further work is required to import the output of the model into the density map.
 
+## Roadmap
+
+No further work will be completed on this model at this current time.
+
+1. Create Agents - Completed
+
+2. Create Environment - Completed
+
+3. Create wind conditions - Completed
+
+4. Create falling conditions - Completed
+
+5. Create a landed switch - Completed
+
+6. Append landed bacteria to a new list - Completed
+
+7. Write new list to CSV - Failed (only writes 1 X and Y coordinate to the list)
+
+8. Produce density plots - Completed (with random numbers)
+
+9. Export density plot to Image - Completed
+
+10. Expand the model - Potential for further work if revisited
+
 ## Description
 
 The brief of the model was to produce a density map of the fallout of a biological weapon within a city. The bomb is set off a specific point within the city and release a number of deadly bacteria. The bacteria move around the city as the wind blows and have specific chances of moving in any direction. When the bacteria are below 75m they start to fall to the ground and when they land their X and Y coordinates are recorded to a CSV. This CSV is imported into another model the plots a density using Gaussian Kernel Density and exports the graphs to a .png file.
@@ -107,30 +131,6 @@ The current values for windspeed and number of bacteria have to be altered manua
 The bacteria all start at 75m and X = 50 and Y = 150 which is what is wanted but does not simulate an explosion further coding may add in a probability again for the bacteria to be thrown out in an explosion like simulation around the top of the building with different distances from the point source and different heights so that the bacteria will provide a better density map as currently they are all clumped together.
 
 The bacteria in the air should move according to fluid dynamics. If they are too clumped together then they should push each other away and if they are further away should ideally slow move towards each other till a threshold is hit. This could be done by a creating a neighbourhood for the particles and helps make the simulation more real world like.
-
-## Roadmap
-
-No further work will be completed on this model at this current time.
-
-1. Create Agents - Completed
-
-2. Create Environment - Completed
-
-3. Create wind conditions - Completed
-
-4. Create falling conditions - Completed
-
-5. Create a landed switch - Completed
-
-6. Append landed bacteria to a new list - Completed
-
-7. Write new list to CSV - Failed (only writes 1 X and Y coordinate to the list)
-
-8. Produce density plots - Completed (with random numbers)
-
-9. Export density plot to Image - Completed
-
-10. Expand the model - Potential for further work if revisited
 
 ## Contributing
 

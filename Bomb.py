@@ -11,15 +11,22 @@ import matplotlib.animation
 import agentframework
 import tkinter
 import time
+
+
 #creates the figure and the axes 
 fig = matplotlib.pyplot.figure(figsize=(7, 7))
 ax = fig.add_axes([0, 300, 0, 300])
+
+
 #create the number of bacteria being modelled
 num_of_bacteria = 500
+
 #create an empty list to append the bacteria data to 
 bacteria = []
+
 #create an empty list to append the environment to 
 environment = []
+
 #create an empty list to append append the bacteria that have hit the ground to
 fallen = []
 
@@ -48,8 +55,12 @@ has_fallen = 0
 for i in range(num_of_bacteria):
      bacteria.append(agentframework.Bacteria(bacteria,environment,has_fallen,fallen,t,x,y))
 carry_on = True
+
+
 # starts a clock for testing the time the model takes to run 
 start = time.clock()
+
+
 # defines the update in the model for each time the model moves    
 def update(frame_number):
 #    counter = 0
@@ -66,10 +77,12 @@ def update(frame_number):
             bacteria[i].fall()
 #changes the state of the bacteria if they hit the ground   
             bacteria[i].landed()
+    
 #plots the envrioment using matplotlib and shows the environment on the plot
     matplotlib.pyplot.ylim(0, 300)
     matplotlib.pyplot.xlim(0, 300)
     matplotlib.pyplot.imshow(environment)
+    
 #plots the bacteria was used in the testing porcess to make sure the bacteria moved and fell
     for i in range(num_of_bacteria):
 #simple switch again for the bacteria 
@@ -80,25 +93,33 @@ def update(frame_number):
 #if the bacteria have landed they are plotted by a yellow cross 
            matplotlib.pyplot.scatter(bacteria[i]._x,bacteria[i]._y, marker = "x", color = 'yellow')
 
+
 #create the stopping condtion
 def gen_function(b = [0]):
     for i in range(num_of_bacteria):
         global carry_on #Not actually needed as we're not assigning, but clearer
+        
 #while the list size of bacteria doesnt = the list size of the fallen and the carry on is true the model will run  
         while ((len(bacteria)) != (len(fallen))) & (carry_on) :
             yield len(bacteria)
+            
 #if the list of fallen does = list size of bacteria then the model stops 
         if (len(fallen)) == (len(bacteria)):
             carry_on = False
+            
 #writes the x and y data to a text file so it can be inputted into the density program
         with open ('fallen.csv',mode ='w') as fallen_list:
             fallen_writer = csv.writer(fallen_list,delimiter = ',')
 #currently this only puts the last x and y coordinate into the text file 
             fallen_writer.writerow([fallen[i]._x,fallen[i]._y])
+    
+   
 #prints the x and y of all the landed bacteria 
             print (fallen[i]._x,fallen[i]._y)
+    
 #prints to say all the bacteria have landed 
     print ("all the bacteria have landed")
+    
 #ends the clock 
     end = time.clock()
 #prints the run time of the model 

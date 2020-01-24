@@ -122,7 +122,7 @@ The best way to simulate all of the bacteria falling seems to be to run 500 bact
 
 ## Limitations 
 
-As we have already stated the model crashes if 5000 bacteria are run through the model. This seems to be a hardware issue. One method to fix this would be to remove the animation from the model and recode the model so the model doesn’t have to redraw the model for 5000 bacteria each time they move. However due to time constraints this was not complete.
+As we have already stated the model crashes if 5000 bacteria are run through the model. This seems to be a hardware issue. One method to fix this would be to remove the animation from the model and recode the model so the model doesn’t have to redraw the model for 5000 bacteria each time they move.This would increase the eficiency of the model and reduce memory usage allowing it to run faster. However due to time constraints this was not complete.
 
 Currently further work is required to write to the CSV currently the model only writes the X and Y coordinates to the CSV of the last bacteria to land. One potential fix may be the creation of a new environment and to add a 1 to the environment when a bacteria lands and then plotting the density as that.
 

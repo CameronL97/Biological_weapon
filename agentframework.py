@@ -51,6 +51,8 @@ class Bacteria:
 # if neither condition is met then y remains the same
         else:
             self._y = self._y 
+            
+            
 #creates the fall command 
     def fall (self):
 #while t>75 there is a 20% chance the bacteria may be blown upward by 1 metre 
@@ -69,6 +71,8 @@ class Bacteria:
 #ensures that t can never be under 0        
         if self._t < 0:
             self._t = 0
+            
+            
 #creates the landed switch
     def landed (self):
 #if t = 0 then the switch turns to 1 
@@ -84,6 +88,7 @@ class Bacteria:
                 index_fallen = self.bacteria.index(bacteria)
                 if bacteria not in self.fallen:
                     self.fallen.append(bacteria)
+                    
 # tried experimenting with deleting from list however this threw up lots of errors 
 #                    del self.bacteria[index_fallen]
 
